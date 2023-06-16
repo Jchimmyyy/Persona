@@ -26,4 +26,16 @@ public class Profesor extends Persona{
     public String getMateria() {
         return materia;
     }
+     @Override
+    public String toString() {
+        return "nombre: " + getNombre() +
+                "\ncedula: " + getCedula()+
+                "\nuniversidd: "+universidad+
+                "\nmateria: "+materia;
+    }
+    public void imprimirAtributos(){
+        super.imprimirAtributos();
+        System.out.println("universidd: "+universidad+
+                "\nmateria: "+materia);
+    }
 }
