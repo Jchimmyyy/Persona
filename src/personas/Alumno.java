@@ -15,4 +15,13 @@ public class Alumno extends Persona{
     public void setUniversidad(String universidad) {
         this.universidad = universidad;
     }
+    @Override
+    public String toString() {
+        return super.toString()+"\nUniversidad: "+universidad;
+    }
+    public void imprimirAtributos(){
+        super.imprimirAtributos();
+        System.out.println("universidad: " + universidad);
+    }
 }
+
