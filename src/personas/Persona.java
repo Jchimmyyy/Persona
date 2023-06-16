@@ -30,4 +30,8 @@ public class Persona {
         return "nombre: " + nombre +
                 "\ncedula: " + cedula ;
     }
+    public void imprimirAtributos(){
+        System.out.println("nombre: " + nombre +
+                "cedula: " + cedula);
+    }
 }
