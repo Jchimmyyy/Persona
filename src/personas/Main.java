@@ -7,10 +7,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       String nombre, cedula, universidad, carrera, maestria, materia;
+        String nombre, cedula, universidad, carrera, maestria, materia;
        int op;
         Scanner sc = new Scanner(System.in);
-        List<Persona> personas = new ArrayList<Persona>();
+        //List<Persona> personas = new ArrayList<Persona>();
+        List personas=new ArrayList();
        do {
            System.out.println("1. Ingresar Alumno de pregrado");
            System.out.println("2. Ingresar Alumno de posgrado");
@@ -30,7 +31,7 @@ public class Main {
                    System.out.print("Ingrese la carrera: ");
                    carrera = sc.next();
                    personas.add(new AlumnoPregrado(nombre,cedula,universidad,carrera));
-
+                   personas.add("HOla que tal!");
                }break;
                case 2:{
                    System.out.print("Ingreso la cedula: ");
@@ -57,9 +58,10 @@ public class Main {
                }
                break;
                case 4:{
-                   for(Persona p:personas){
+                   /*for(Persona p:personas){
                        System.out.println(p);
-                   }
+                   }*/
+                 imprimirLista ((ArrayList) personas);
                }break;
 
            }
@@ -67,4 +69,14 @@ public class Main {
        }while(op != 5);
 
     }
+    public static void imprimirLista(ArrayList lista){
+        for(int i=0; i<lista.size();i++){
+            if(lista.get(i) instanceof Persona){
+                Persona p= (Persona)lista.get(i);
+                p.imprimirAtributos();
+            }
+          
+        }
+    }
 }
+
