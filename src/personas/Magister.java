@@ -15,4 +15,15 @@ public class Magister extends Alumno{
     public String getMaestria() {
         return maestria;
     }
+    @Override
+    public String toString() {
+        return "nombre: " + getNombre() +
+                "\ncedula: " + getCedula() +
+                "\nuniversidad: " + getUniversidad() +
+                "\nmaestria: " + maestria;
+    }
+    public void imprimirAtributos(){
+        super.imprimirAtributos();
+        System.out.println("maestria: "+maestria);
+    }
 }
